@@ -1,0 +1,46 @@
+#slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  #moveRight, #moveLeft {
+    position: absolute;
+    font-size: 140px;
+    padding: 1rem;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left .3s, right .3s;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #moveLeft {
+    left: 1rem;
+    &:hover {
+      left: .5rem;
+    }
+  }
+  #moveRight {
+    right: 1rem;
+    &:hover {
+      right: .5rem;
+    }
+  }
+  .slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: margin-left 1s;
+    .slide {
+      display: inline;
+      width: 100vw;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+}

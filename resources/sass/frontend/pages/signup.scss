@@ -1,0 +1,28 @@
+#signUpForm {
+  width: 50%;
+  margin: 0 auto;
+  .card {
+    background: #f6f6f6;
+    padding: 4rem;
+  }
+  .col-2 {
+    display: flex;
+
+    .form-group {
+      width: 48%;
+
+      &:first-of-type {
+        margin-right: 4%;
+      }
+    }
+  }
+
+  .birthDate {
+    display: flex;
+
+    select {
+      margin-right: 4%;
+      width: max-content;
+    }
+  }
+}
