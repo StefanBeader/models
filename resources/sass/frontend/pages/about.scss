@@ -1,16 +1,36 @@
 #about {
   text-align: center;
-  padding-bottom: 5rem;
   .members {
     display: flex;
-
+      justify-content: space-between;
     .member {
-      width: 50%;
+      width: 45%;
       margin: 1rem auto 0 auto;
+
+        .img-holder {
+            width: 50%;
+            margin: 0 auto;
+        }
 
       h4 {
         margin: 2rem 0;
       }
     }
   }
+}
+
+@media screen and (max-width: 34.375rem) {
+    #about {
+        .members {
+            flex-direction: column;
+
+            .member {
+                width: 100%;
+
+                &:first-of-type {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
 }

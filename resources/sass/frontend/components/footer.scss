@@ -1,0 +1,94 @@
+footer {
+    background-color: black;
+    padding: 3rem 0;
+
+    .logo {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        ul {
+            li {
+                display: inline-block;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 1em;
+                    font-family: $primary-font;
+                    letter-spacing: 1px;
+                    transition: color .3s;
+                    display: block;
+
+                    &:hover {
+                        color: lighten(black, 40);
+                    }
+
+                    &:visited,
+                    &:active,
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &.dropdown-holder {
+                    position: relative;
+
+                    .dropdown {
+                        width: 100%;
+                        position: absolute;
+                        z-index: 10;
+                        bottom: 3rem;
+                        left: 0;
+                        flex-direction: column;
+                        background-color: black;
+                        opacity: 0;
+                        transition: opacity .5s;
+                        visibility: hidden;
+
+                        &.show {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        li {
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        .icon {
+            width: 2.5rem;
+            margin-right: 2rem;
+            path {
+                fill: white;
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        color: white;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 65.625rem) {
+    footer {
+        .links {
+            display: none;
+        }
+    }
+}

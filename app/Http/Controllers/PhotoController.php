@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Widget;
+use App\Photo;
 use Illuminate\Http\Request;
 
-class WidgetController extends Controller
+class PhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class WidgetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Widget  $widget
+     * @param  \App\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function show(Widget $widget)
+    public function show(Photo $photo)
     {
         //
     }
@@ -52,10 +52,10 @@ class WidgetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Widget  $widget
+     * @param  \App\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Widget $widget)
+    public function edit(Photo $photo)
     {
         //
     }
@@ -64,10 +64,10 @@ class WidgetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Widget  $widget
+     * @param  \App\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Widget $widget)
+    public function update(Request $request, Photo $photo)
     {
         //
     }
@@ -75,10 +75,10 @@ class WidgetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Widget  $widget
+     * @param  \App\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Widget $widget)
+    public function destroy(Photo $photo)
     {
         //
     }

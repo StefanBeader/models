@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePagesWidgetsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePagesWidgetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages_widgets', function (Blueprint $table) {
-            $table->unsignedBigInteger('page_id');
-            $table->unsignedBigInteger('widget_id');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreatePagesWidgetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pages_widgets');
+        Schema::dropIfExists('categories');
     }
 }

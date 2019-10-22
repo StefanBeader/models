@@ -1,9 +1,10 @@
 #signUpForm {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   .card {
     background: #f6f6f6;
     padding: 4rem;
+      margin-bottom: 3rem;
   }
   .col-2 {
     display: flex;
@@ -20,9 +21,88 @@
   .birthDate {
     display: flex;
 
-    select {
+    .custom-select {
       margin-right: 4%;
-      width: max-content;
+      width: 20%;
+
+        &:nth-of-type(2) {
+            width: 40%;
+        }
+
+        &:last-of-type {
+            margin: 0;
+            width: 32%;
+        }
     }
   }
+
+    .preview {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 100%;
+        position: relative;
+        margin-top: 1rem;
+
+        &.img-1 {
+            background-image: url("../../../../public/frontend/img/doris.jpg");
+        }
+
+        &.img-2 {
+            background-image: url("../../../../public/frontend/img/doris.jpg");
+        }
+
+        &.img-3 {
+            background-image: url("../../../../public/frontend/img/doris.jpg");
+        }
+
+        &.img-4 {
+            background-image: url("../../../../public/frontend/img/doris.jpg");
+        }
+
+        input[type=button] {
+            width: 80%;
+            background: black;
+            color: white;
+            position: absolute;
+            bottom: 1rem;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 12px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .accept {
+        input {
+            margin: 0 10px 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 65.625rem) {
+    #signUpForm {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 34.375rem) {
+    #signUpForm {
+        width: 100%;
+        .card {
+            padding: 2rem 1rem;
+        }
+
+        .col-2 {
+            flex-direction: column;
+
+            .form-group {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
 }

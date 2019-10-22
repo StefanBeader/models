@@ -5,3 +5,11 @@
     width: 50%;
   }
 }
+
+@media screen and (max-width: 65.625rem) {
+    #contact {
+        .form {
+            width: 100%;
+        }
+    }
+}

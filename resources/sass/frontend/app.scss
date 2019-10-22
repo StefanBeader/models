@@ -7,4 +7,17 @@
 @import "pages/about";
 @import "pages/contact";
 @import "pages/signup";
+@import "pages/models";
+@import "pages/portfolio";
+@import "components/customSelect";
+@import "components/buttons";
+@import "components/footer";
+
+.hide {
+    display: none;
+}
+
+.pb-5 {
+    padding-bottom: 5rem;
+}
 

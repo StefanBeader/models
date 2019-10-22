@@ -1,0 +1,30 @@
+#models {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+
+    .model {
+        .image {
+            height: 250px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h3 {
+            color: black;
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 65.625rem) {
+    #models {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 34.375rem) {
+    #models {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('pageTitle')
+    HOME
+@endsection
+
 @section('main')
     <div class="container-full">
         <div id="slider">

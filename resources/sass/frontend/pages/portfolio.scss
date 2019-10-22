@@ -1,0 +1,41 @@
+#model {
+    display: flex;
+
+    .photos {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .info {
+        width: 50%;
+        padding-left: 4rem;
+
+        ul {
+            li {
+                font-size: 24px;
+                color: silver;
+                padding: 1rem;
+                border-bottom: 1px solid #f8fafc;
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 65.625rem) {
+    #model {
+        flex-direction: column;
+        .photos {
+            width: 100%;
+        }
+
+        .info {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}

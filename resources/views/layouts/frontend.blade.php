@@ -15,8 +15,6 @@
     <script src="{{ asset('frontend/js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    {{--<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,700&display=swap"--}}
-          {{--rel="stylesheet">--}}
     <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:700|Orienta&display=swap" rel="stylesheet">
 
     <!-- Styles -->

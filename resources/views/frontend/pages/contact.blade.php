@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('pageTitle')
+    CONTACT US
+@endsection
+
 @section('main')
     <div class="container">
         <section>
