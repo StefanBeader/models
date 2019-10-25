@@ -898,26 +898,26 @@ nav #mobile-nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 550px;
   width: 100%;
   position: relative;
   margin-top: 1rem;
 }
 
 #signUpForm .preview.img-1 {
-  background-image: url(/images/doris.jpg?53ea6e571f37fe95990a00c5979de4be);
+  background-image: url(/images/full_length.jpg?de2373a27602e3a5801cc85f79d80e1b);
 }
 
 #signUpForm .preview.img-2 {
-  background-image: url(/images/doris.jpg?53ea6e571f37fe95990a00c5979de4be);
+  background-image: url(/images/waist_up.jpg?591a93d869cb713473505ce8df6e337b);
 }
 
 #signUpForm .preview.img-3 {
-  background-image: url(/images/doris.jpg?53ea6e571f37fe95990a00c5979de4be);
+  background-image: url(/images/close_up.jpg?fa98bad7f6498cca73fe7e9216a6d023);
 }
 
 #signUpForm .preview.img-4 {
-  background-image: url(/images/doris.jpg?53ea6e571f37fe95990a00c5979de4be);
+  background-image: url(/images/profile.jpg?7346f6ae97cb208f06dbc277e9d57630);
 }
 
 #signUpForm .preview input[type=button] {
@@ -1207,5 +1207,9 @@ footer .copyright {
 
 .pb-5 {
   padding-bottom: 5rem;
+}
+
+.message-success {
+  color: #38c172;
 }
 

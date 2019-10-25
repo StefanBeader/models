@@ -8,7 +8,7 @@
 
     <div class="container">
         <section class="pb-5">
-            <h1 class="text-center">Sign up</h1>
+            <h1 class="text-center">Become a Model</h1>
             <div id="signUpForm">
                 <form enctype="multipart/form-data" action="{{ URL::to('/models') }}" method="POST">
                     {{ csrf_field() }}

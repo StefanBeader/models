@@ -1,23 +1,6 @@
 <nav class="container">
     <div id="desktop-nav">
         <ul>
-            <li>
-                <a href="{{ URL::to('/') }}">Home</a>
-            </li>
-            <li>
-                <a href="{{ URL::to('/about') }}">About</a>
-            </li>
-            <li>
-                <a href="{{ URL::to('/contact') }}">Contact</a>
-            </li>
-            <li>
-                <a href="{{ URL::to('/sign-up') }}">Sign up</a>
-            </li>
-        </ul>
-        <div class="logo">
-            <img src="{{ asset('frontend/img/logo.jpg') }}" alt="">
-        </div>
-        <ul>
             <li class="dropdown-holder">
                 <a class="dropdown-toggle" href="{{ URL::to('/') }}">Commercial</a>
                 <ul class="dropdown">
@@ -50,6 +33,23 @@
                 <a href="{{ URL::to('/kids') }}">Kids</a>
             </li>
         </ul>
+        <div class="logo">
+            <img src="{{ asset('frontend/img/logo.jpg') }}" alt="">
+        </div>
+        <ul>
+            <li>
+                <a href="{{ URL::to('/') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ URL::to('/about') }}">About</a>
+            </li>
+            <li>
+                <a href="{{ URL::to('/contact') }}">Contact</a>
+            </li>
+            <li>
+                <a href="{{ URL::to('/sign-up') }}">Become a model</a>
+            </li>
+        </ul>
     </div>
     <div id="mobile-nav">
         <div class="top">
@@ -62,18 +62,6 @@
         </div>
         <div class="links">
             <ul>
-                <li>
-                    <a href="{{ URL::to('/') }}">Home</a>
-                </li>
-                <li>
-                    <a href="{{ URL::to('/about') }}">About</a>
-                </li>
-                <li>
-                    <a href="{{ URL::to('/contact') }}">Contact</a>
-                </li>
-                <li>
-                    <a href="{{ URL::to('/sign-up') }}">Sign up</a>
-                </li>
                 <li class="dropdown-holder">
                     <a class="dropdown-toggle" href="{{ URL::to('/') }}">Commercial</a>
                     <ul class="dropdown">
@@ -104,6 +92,18 @@
                 </li>
                 <li>
                     <a href="{{ URL::to('/kids') }}">Kids</a>
+                </li>
+                <li>
+                    <a href="{{ URL::to('/') }}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ URL::to('/about') }}">About</a>
+                </li>
+                <li>
+                    <a href="{{ URL::to('/contact') }}">Contact</a>
+                </li>
+                <li>
+                    <a href="{{ URL::to('/sign-up') }}">Become a model</a>
                 </li>
             </ul>
         </div>

@@ -40,25 +40,25 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 400px;
+        height: 550px;
         width: 100%;
         position: relative;
         margin-top: 1rem;
 
         &.img-1 {
-            background-image: url("../../../../public/frontend/img/doris.jpg");
+            background-image: url("../../../../public/frontend/img/full_length.jpg");
         }
 
         &.img-2 {
-            background-image: url("../../../../public/frontend/img/doris.jpg");
+            background-image: url("../../../../public/frontend/img/waist_up.jpg");
         }
 
         &.img-3 {
-            background-image: url("../../../../public/frontend/img/doris.jpg");
+            background-image: url("../../../../public/frontend/img/close_up.jpg");
         }
 
         &.img-4 {
-            background-image: url("../../../../public/frontend/img/doris.jpg");
+            background-image: url("../../../../public/frontend/img/profile.jpg");
         }
 
         input[type=button] {

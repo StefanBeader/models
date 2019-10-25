@@ -9,6 +9,7 @@ Route::get('/sign-up', 'PageController@signUp')->name('signUp');
 Route::get('/sign-up-success', 'PageController@signUpSuccess')->name('signUpSuccess');
 
 Route::post('/models', 'MannequinController@store');
+Route::post('/message', 'MessageController@store');
 
 Route::get('/model/{id}/{name}', 'PageController@portfolio')->name('model');
 
