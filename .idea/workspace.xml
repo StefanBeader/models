@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fbf77f6-9956-4618-a35a-5fb685b3b0db" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/apache2/sites/default.apache.conf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/apache2/sites/default.apache.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +211,7 @@
       <workItem from="1571669794188" duration="16586000" />
       <workItem from="1571765389398" duration="5413000" />
       <workItem from="1571824993562" duration="464000" />
-      <workItem from="1572026586115" duration="3953000" />
+      <workItem from="1572026586115" duration="4294000" />
     </task>
     <servers />
   </component>
