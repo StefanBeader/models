@@ -5,3 +5,7 @@ mix
   .js('resources/js/backend/app.js', 'public/backend/js')
   .sass('resources/sass/frontend/app.scss', 'public/frontend/css')
   .sass('resources/sass/backend/app.scss', 'public/backend/css');
+
+if (mix.inProduction()) {
+    mix.version();
+}

@@ -1,4 +1,9 @@
 /node_modules
+/.idea
+public/frontend/css/app.css
+public/frontend/js/app.js
+public/backend/css/app.css
+public/backend/js/app.js
 /public/hot
 /public/storage
 /storage/*.key
