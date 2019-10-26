@@ -12,13 +12,13 @@
     <meta name="description" content="@yield('pageDescription')">
 
     <!-- Scripts -->
-    <script src="{{ asset('frontend/js/app.js') }}" defer></script>
+    <script src="{{ mix('frontend/js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:700|Orienta&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('frontend/css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('frontend/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
