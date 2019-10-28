@@ -2,6 +2,15 @@
 
 Auth::routes(['register' => false]);
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/admin', 'AdminController@index');
+
+    //models
+    Route::get('/models', 'MannequinController@index');
+    Route::get('/models/create', 'MannequinController@create');
+    Route::get('/models/{mannequin}/edit', 'MannequinController@edit');
+});
+
 Route::get('/', 'PageController@home')->name('home');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');

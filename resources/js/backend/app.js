@@ -5,3 +5,16 @@
  */
 
 require('./bootstrap');
+
+const school = document.getElementById('school');
+
+if (school) {
+    school.addEventListener('change', (e) => {
+        const schoolType = e.target.parentElement.parentElement.children[1];
+        if (e.target.value === 'no') { //no school
+            schoolType.classList.add("hide");
+        } else {
+            schoolType.classList.remove("hide")
+        }
+    });
+}

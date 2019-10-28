@@ -17,13 +17,15 @@ class CreateMannequinsTable extends Migration
             $table->bigIncrements('id');
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('nick_name')->nullable();
             $table->string('email')->unique();
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('city')->nullable();
             $table->string('instagram')->nullable();
             $table->string('gender');
             $table->date('birthday');
             $table->string('school');
+            $table->string('school_type')->nullable();
             $table->integer('height');
             $table->integer('waist');
             $table->integer('bust');
@@ -31,7 +33,7 @@ class CreateMannequinsTable extends Migration
             $table->integer('shoe_size');
             $table->string('eyes_color');
             $table->string('hair_color');
-            $table->string('status')->default('pending');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

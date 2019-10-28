@@ -19,6 +19,7 @@ class Mannequin extends Model
         'gender',
         'birthday',
         'school',
+        'school_type',
         'height',
         'waist',
         'bust',
@@ -26,6 +27,7 @@ class Mannequin extends Model
         'shoe_size',
         'eyes_color',
         'hair_color',
+        'status',
     ];
 
     /**

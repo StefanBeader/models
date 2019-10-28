@@ -6,3 +6,22 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import "dashboard/index";
+@import "components/navigation";
+
+.hide {
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+    main {
+        padding: 2rem 1rem;
+        flex: 1;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}

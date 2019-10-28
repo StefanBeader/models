@@ -36913,6 +36913,21 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/backend/bootstrap.js");
 
+var school = document.getElementById('school');
+
+if (school) {
+  school.addEventListener('change', function (e) {
+    var schoolType = e.target.parentElement.parentElement.children[1];
+
+    if (e.target.value === 'no') {
+      //no school
+      schoolType.classList.add("hide");
+    } else {
+      schoolType.classList.remove("hide");
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/js/backend/bootstrap.js":

@@ -77,4 +77,9 @@ class MannequinRepository
             ->with('photos')
             ->firstOrFail();
     }
+
+    public function findAllWithPagination($perPage = 8)
+    {
+        return $this->model->where('id', '!=', null)->orderBy('id', 'DESC')->paginate($perPage);
+    }
 }
