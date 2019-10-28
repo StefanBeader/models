@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\MannequinStatus;
 use App\Http\Requests\StoreMannequinRequest;
 use App\Mail\PendingModelMail;
+use App\Models\Category;
 use App\Models\Mannequin;
 use App\Repositories\MannequinRepository;
 use App\Repositories\PhotoRepository;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
 
 class MannequinController extends Controller
@@ -70,12 +74,18 @@ class MannequinController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Mannequin  $mannequin
-     * @return Response
+     * @param Mannequin $mannequin
+     * @return void
      */
     public function show(Mannequin $mannequin)
     {
-        //
+        $photos = $mannequin->photos;
+        $statuses = MannequinStatus::$statuses;
+        $categories = Category::CATEGORIES;
+        return view(
+            'backend.mannequins.show',
+            compact('mannequin', 'photos', 'statuses', 'categories')
+        );
     }
 
     /**
@@ -92,23 +102,36 @@ class MannequinController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Mannequin  $mannequin
-     * @return Response
+     * @param Request $request
+     * @param int $id
+     * @return void
      */
-    public function update(Request $request, Mannequin $mannequin)
+    public function update(Request $request, int $id)
     {
-        //
+        $this->_mannequinRepo->update($request->all(), $id);
+        return redirect('/models');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Mannequin  $mannequin
-     * @return Response
+     * @param Mannequin $mannequin
+     * @return void
      */
     public function destroy(Mannequin $mannequin)
     {
         //
+    }
+
+    /**
+     * Store Mannequin by app admin
+     * @param Request $request
+     * @return RedirectResponse|Redirector
+     */
+    public function addModel(Request $request)
+    {
+        $mannequin = $this->_mannequinRepo->store($request->all());
+        $this->_photoRepo->storeAll($request->allFiles(), $mannequin->id);
+        return redirect('/models');
     }
 }

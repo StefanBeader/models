@@ -7,6 +7,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     //models
     Route::get('/models', 'MannequinController@index');
+    Route::post('/addModel', 'MannequinController@addModel');
+    Route::get('/models/{mannequin}', 'MannequinController@show');
+    Route::put('/models/{id}', 'MannequinController@update');
     Route::get('/models/create', 'MannequinController@create');
     Route::get('/models/{mannequin}/edit', 'MannequinController@edit');
 });

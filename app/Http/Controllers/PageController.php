@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Repositories\CategoryRepository;
 use App\Repositories\MannequinRepository;
 use Illuminate\Contracts\View\Factory;
@@ -73,6 +74,9 @@ class PageController extends Controller
      */
     public function models(string $category, string $gender = '')
     {
+        if (!in_array($category, Category::CATEGORIES)) {
+            abort(404);
+        }
         $models = $this->_mannequinRepo->findByCategory($category, $gender);
         return view('frontend.pages.models', compact('models', 'category'));
     }

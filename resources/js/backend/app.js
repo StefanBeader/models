@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('bootstrap-select');
 
 const school = document.getElementById('school');
 
@@ -18,3 +19,8 @@ if (school) {
         }
     });
 }
+
+$(function () {
+    $('.selectpicker').selectpicker();
+    console.log('test')
+});

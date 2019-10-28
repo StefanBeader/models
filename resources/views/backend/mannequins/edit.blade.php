@@ -7,7 +7,7 @@
                 <h1>Edit Model</h1>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="{{ URL::to('/models' . $mannequin->id) }}" method="POST">
+        <form enctype="multipart/form-data" action="{{ URL::to('/models/' . $mannequin->id) }}" method="POST">
             <input name="_method" type="hidden" value="PUT">
             <div class="row">
                 <div class="col">
