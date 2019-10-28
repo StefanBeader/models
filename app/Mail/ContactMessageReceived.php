@@ -31,7 +31,8 @@ class ContactMessageReceived extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.contact_message')
+        return $this->from($this->message->email, $this->message->name)
+            ->view('mails.contact_message')
             ->with(['data' => $this->message]);
     }
 }

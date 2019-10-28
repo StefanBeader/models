@@ -63,7 +63,7 @@ class MannequinController extends Controller
     {
         $mannequin = $this->_mannequinRepo->store($request->all());
         $this->_photoRepo->storeAll($request->allFiles(), $mannequin->id);
-        Mail::to('test@test.com')->send(new PendingModelMail($mannequin));
+        Mail::to(config('mail.to.address'))->send(new PendingModelMail($mannequin));
         return redirect('/sign-up-success');
     }
 

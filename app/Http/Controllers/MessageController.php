@@ -50,7 +50,7 @@ class MessageController extends Controller
     {
         $message = $this->_messageRepo->store($request->all());
         session()->flash('message_success', 'Successfully sent message. We will contact you shortly.');
-        Mail::to('test@test.com')->send(new ContactMessageReceived($message));
+        Mail::to(config('mail.to.address'))->send(new ContactMessageReceived($message));
         return redirect()->back();
     }
 

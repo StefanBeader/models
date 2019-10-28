@@ -33,7 +33,8 @@ class PendingModelMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.pending_model')
+        return $this->from(config('mail.from.address'), 'D Model Management')
+            ->view('mails.pending_model')
             ->with([
                 'mannequinId' => $this->mannequin->id,
                 'mannequinName' => $this->mannequin->getName(),
