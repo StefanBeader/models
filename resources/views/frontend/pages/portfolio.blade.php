@@ -4,17 +4,27 @@
     {{ $model->getName() }}
 @endsection
 
+@section('scripts')
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
+@endsection
+
 @section('main')
     <div class="container">
         <section>
             <h1 class="text-center">{{ $model->getName() }}</h1>
 
             <div id="model">
-                <div class="photos">
+                <div class="photos grid" data-masonry='
+                                    { "itemSelector": ".grid-item",
+                                    "columnWidth": ".grid-item",
+                                    "percentPosition": true,
+                                     "gutter": 16 }'>
                     @foreach($model->photos as $photo)
-                        <div class="photo">
-                            <img src="{{ asset('frontend/img/' . $photo->path) }}" alt="{{ $model->getName() }}">
-                        </div>
+                        @if($photo->type === 'book')
+                            <div class="photo grid-item">
+                                <img src="{{ asset('frontend/img/' . $photo->path) }}" alt="{{ $model->getName() }}">
+                            </div>
+                        @endif
                     @endforeach
                 </div>
                 <div class="info">

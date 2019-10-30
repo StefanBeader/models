@@ -998,15 +998,17 @@ nav #mobile-nav {
 }
 
 #model .photos {
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  width: 70%;
+}
+
+#model .photos .grid-item {
+  width: 45%;
+  margin-bottom: 1rem;
 }
 
 #model .info {
-  width: 50%;
-  padding-left: 4rem;
+  width: 30%;
+  padding-left: 1rem;
 }
 
 #model .info ul li {

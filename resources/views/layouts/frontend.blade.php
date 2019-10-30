@@ -14,6 +14,8 @@
     <!-- Scripts -->
     <script src="{{ mix('frontend/js/app.js') }}" defer></script>
 
+    @yield('scripts')
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:700|Orienta&display=swap" rel="stylesheet">
 

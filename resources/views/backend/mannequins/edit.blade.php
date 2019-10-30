@@ -233,61 +233,97 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-6">
+                <div class="col">
                     <div class="card">
-                        <div class="card-header font-weight-bold">Photos</div>
+                        <div class="card-header font-weight-bold">Status & Categories</div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col form-group">
-                                    <label for="full_length">Full Length</label>
-                                    @error('full_length')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-1">
-                                        <input type="file" name="full_length" id="full_length" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('full_length').click();"/>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="status">Model Status</label>
+                                        <select class="form-control" name="status" id="status">
+                                            @foreach($statuses as $key => $status)
+                                                <option @if ($mannequin->status == $key) selected @endif
+                                                value="{{ $key }}">{{ ucfirst($status) }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col form-group">
-                                    <label for="waist_up">Waist Up</label>
-                                    @error('waist_up')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-2">
-                                        <input type="file" name="waist_up" id="waist_up" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('waist_up').click();"/>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="categories">Model Categories</label>
+                                        <select class="form-control selectpicker" multiple name="categories[]" id="categories">
+                                            @foreach($categories as $key => $category)
+                                                <option @if (in_array($key, $mannequinCategories)) selected @endif
+                                                value="{{ $key }}">{{ ucfirst($category) }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col form-group">
-                                    <label for="close_up">Close Up</label>
-                                    @error('close_up')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-3">
-                                        <input type="file" name="close_up" id="close_up" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('close_up').click();"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">Photos</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="photos">Add Photos</label>
+                                        <input class="form-control" type="file" multiple name="photos[]" id="photos">
                                     </div>
                                 </div>
-                                <div class="col form-group">
-                                    <label for="profile">Profile</label>
-                                    @error('profile')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-4">
-                                        <input type="file" name="profile" id="profile" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('profile').click();"/>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="grid" data-masonry='
+                                    { "itemSelector": ".grid-item",
+                                    "columnWidth": ".grid-item",
+                                    "percentPosition": true,
+                                     "gutter": 30 }'
+                                    >
+                                        @forelse($photos as $photo)
+                                            <div class="grid-item">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img style="width: 100%;height: 100%;"
+                                                             data-id="{{ $photo->id }}"
+                                                             src="{{ asset('frontend/img/'.$photo->path) }}" alt=""
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <a class="btn btn-danger btn-block"
+                                                                   href="{{ URL::to('/photos/destroy/'.$photo->id) }}"
+                                                                >Delete</a>
+                                                            </div>
+                                                            <div class="col">
+                                                                @if($photo->is_primary)
+                                                                    <a class="btn btn-info btn-block disabled"
+                                                                       href="{{ URL::to('/photos/setPrimary/'.$photo->id) }}"
+                                                                    >Primary</a>
+                                                                @else
+                                                                    <a class="btn btn-success btn-block"
+                                                                       href="{{ URL::to('/photos/setPrimary/'.$photo->id) }}"
+                                                                    >Set Primary</a>
+                                                                @endIf
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @empty
+                                            <div class="col">
+                                                <p>This Model don't have photos currently</p>
+                                            </div>
+                                        @endforelse
                                     </div>
                                 </div>
                             </div>
@@ -297,7 +333,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-3">
-                    <input class="btn btn-primary" type="submit" value="Edit Model">
+                    <input class="btn btn-primary" type="submit" value="Save Changes">
                 </div>
             </div>
         </form>

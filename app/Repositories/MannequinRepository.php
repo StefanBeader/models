@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Enums\MannequinStatus;
 use App\Models\Mannequin;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -57,7 +58,7 @@ class MannequinRepository
                 $query->where('name', $category);
             }
         )
-            ->where('status', 'approved')
+            ->where('status', MannequinStatus::DISPLAY)
             ->with('photos');
 
         if ($gender) {
@@ -123,6 +124,9 @@ class MannequinRepository
         if (isset($data['school_type']) && !empty($data['school_type'])) {
             $update['school_type'] = $data['school_type'];
         }
+        if (isset($data['status']) && !empty($data['status'])) {
+            $update['status'] = $data['status'];
+        }
         $update['height'] = $data['height'];
         $update['waist'] = $data['waist'];
         $update['bust'] = $data['bust'];
@@ -133,5 +137,11 @@ class MannequinRepository
 
         return $this->model->where('id', $id)
             ->update($update);
+    }
+
+    public function storeMannequinToCategories(array $categories, int $mannequinId)
+    {
+        $mannequin = $this->model->find($mannequinId);
+        $mannequin->categories()->sync($categories);
     }
 }

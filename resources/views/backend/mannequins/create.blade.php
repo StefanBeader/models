@@ -228,69 +228,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-6">
-                    <div class="card">
-                        <div class="card-header font-weight-bold">Photos</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col form-group">
-                                    <label for="full_length">Full Length</label>
-                                    @error('full_length')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-1">
-                                        <input type="file" name="full_length" id="full_length" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('full_length').click();"/>
-                                    </div>
-                                </div>
-                                <div class="col form-group">
-                                    <label for="waist_up">Waist Up</label>
-                                    @error('waist_up')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-2">
-                                        <input type="file" name="waist_up" id="waist_up" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('waist_up').click();"/>
-                                    </div>
-                                </div>
-                                <div class="col form-group">
-                                    <label for="close_up">Close Up</label>
-                                    @error('close_up')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-3">
-                                        <input type="file" name="close_up" id="close_up" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('close_up').click();"/>
-                                    </div>
-                                </div>
-                                <div class="col form-group">
-                                    <label for="profile">Profile</label>
-                                    @error('profile')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                    <div class="preview img-4">
-                                        <input type="file" name="profile" id="profile" style="display:none;">
-                                        <input type="button" value="Upload"
-                                               onclick="document.getElementById('profile').click();"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row mt-5">
                 <div class="col-3">
                     <input class="btn btn-primary" type="submit" value="Add Model">

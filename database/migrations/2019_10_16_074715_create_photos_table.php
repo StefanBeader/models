@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration
             $table->bigIncrements('id');
             $table->string('path');
             $table->string('type');
+            $table->boolean('is_primary')->default(0);
             $table->unsignedBigInteger('mannequin_id');
             $table->timestamps();
         });

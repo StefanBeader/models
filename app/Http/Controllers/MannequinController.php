@@ -80,11 +80,9 @@ class MannequinController extends Controller
     public function show(Mannequin $mannequin)
     {
         $photos = $mannequin->photos;
-        $statuses = MannequinStatus::$statuses;
-        $categories = Category::CATEGORIES;
         return view(
             'backend.mannequins.show',
-            compact('mannequin', 'photos', 'statuses', 'categories')
+            compact('mannequin', 'photos')
         );
     }
 
@@ -96,7 +94,14 @@ class MannequinController extends Controller
      */
     public function edit(Mannequin $mannequin)
     {
-        return view('backend.mannequins.edit', compact('mannequin'));
+        $statuses = MannequinStatus::$statuses;
+        $mannequinCategories = $mannequin->categories()->get()->pluck('id')->toArray();
+        $categories = Category::CATEGORIES;
+        $photos = $mannequin->photos ?? [];
+        return view(
+            'backend.mannequins.edit',
+            compact('mannequin', 'statuses', 'categories', 'mannequinCategories', 'photos')
+        );
     }
 
     /**
@@ -109,7 +114,11 @@ class MannequinController extends Controller
     public function update(Request $request, int $id)
     {
         $this->_mannequinRepo->update($request->all(), $id);
-        return redirect('/models');
+        $this->_mannequinRepo->storeMannequinToCategories($request->categories, $id);
+        if (!empty($request->photos)) {
+            $this->_photoRepo->storeAll($request->photos, $id, 'book');
+        }
+        return redirect()->back();
     }
 
     /**
@@ -130,8 +139,7 @@ class MannequinController extends Controller
      */
     public function addModel(Request $request)
     {
-        $mannequin = $this->_mannequinRepo->store($request->all());
-        $this->_photoRepo->storeAll($request->allFiles(), $mannequin->id);
+        $this->_mannequinRepo->store($request->all());
         return redirect('/models');
     }
 }

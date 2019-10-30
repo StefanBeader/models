@@ -6,12 +6,14 @@ class MannequinStatus
 {
     const PENDING = 1;
     const APPROVED = 2;
-    const DENIED = 3;
-    const POSSIBLE = 4;
+    const DISPLAY = 3;
+    const DENIED = 4;
+    const POSSIBLE = 5;
 
     public static $statuses = [
         self::PENDING => 'pending',
         self::APPROVED => 'approved',
+        self::DISPLAY => 'display',
         self::DENIED => 'denied',
         self::POSSIBLE => 'possible',
     ];
@@ -36,6 +38,7 @@ class MannequinStatus
             case self::PENDING:
                 $html = "<span class='text-primary'>" . ucfirst(self::getStatusName($statusId)) . "</span>";
                 break;
+            case self::DISPLAY:
             case self::APPROVED:
                 $html = "<span class='text-success'>" . ucfirst(self::getStatusName($statusId)) . "</span>";
                 break;

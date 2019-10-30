@@ -7,28 +7,6 @@
                 <h1>View Model</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-3">
-                <div class="form-group">
-                    <label for="status">Model Status</label>
-                    <select class="form-control" name="status" id="status">
-                        @foreach($statuses as $key => $status)
-                            <option value="{{ $key }}">{{ ucfirst($status) }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="form-group">
-                    <label for="categories">Model Categories</label>
-                    <select class="form-control selectpicker" multiple name="categories[]" id="categories">
-                        @foreach($categories as $key => $category)
-                            <option value="{{ $key }}">{{ ucfirst($category) }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-        </div>
         <form enctype="multipart/form-data" action="{{ URL::to('/models/' . $mannequin->id) }}" method="POST">
             <input disabled name="_method" type="hidden" value="PUT">
             <div class="row">
@@ -255,7 +233,7 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-6">
+                <div class="col">
                     <div class="card">
                         <div class="card-header font-weight-bold">Photos</div>
                         <div class="card-body">

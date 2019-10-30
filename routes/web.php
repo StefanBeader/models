@@ -6,12 +6,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', 'AdminController@index');
 
     //models
+    Route::get('/models/create', 'MannequinController@create');
     Route::get('/models', 'MannequinController@index');
     Route::post('/addModel', 'MannequinController@addModel');
     Route::get('/models/{mannequin}', 'MannequinController@show');
     Route::put('/models/{id}', 'MannequinController@update');
-    Route::get('/models/create', 'MannequinController@create');
     Route::get('/models/{mannequin}/edit', 'MannequinController@edit');
+
+    //photos
+    Route::get('/photos/destroy/{photo}', 'PhotoController@destroy');
+    Route::get('/photos/setPrimary/{photo}', 'PhotoController@setPrimary');
 });
 
 Route::get('/', 'PageController@home')->name('home');

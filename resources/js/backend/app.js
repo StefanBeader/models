@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('bootstrap-select');
+require('masonry-layout');
 
 const school = document.getElementById('school');
 
@@ -22,5 +23,10 @@ if (school) {
 
 $(function () {
     $('.selectpicker').selectpicker();
-    console.log('test')
+
+    // $('.grid').masonry({
+    //     itemSelector: '.grid-item',
+    //     columnWidth: 200
+    // });
 });
+

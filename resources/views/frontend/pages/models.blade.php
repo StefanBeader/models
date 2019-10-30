@@ -13,8 +13,9 @@
                 @if($models)
                     @forelse($models as $model)
                         @php
+                            $photo = $model->getPrimaryPhoto();
                             $url = url('/') . '/' . 'frontend/img/';
-                            $url .= $model->photos->first()->path;
+                            $url .= $photo ? $photo->path : 'avatar.png';
                         @endphp
                         <a class="model" href="{{ URL::to('/model/' . base64_encode($model->id) . '/' . \Illuminate\Support\Str::slug($model->getName())) }}">
                             <div class="image" style="background-image: url('{{ $url }}')"></div>

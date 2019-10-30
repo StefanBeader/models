@@ -50,4 +50,12 @@ class Mannequin extends Model
     public function photos() {
         return $this->hasMany(Photo::class);
     }
+
+    /**
+     * @return Photo|null
+     */
+    public function getPrimaryPhoto(): ?Photo
+    {
+        return $this->photos->where('is_primary', true)->first();
+    }
 }

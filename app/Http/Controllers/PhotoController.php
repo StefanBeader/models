@@ -2,11 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Photo;
+use App\Models\Photo;
+use App\Repositories\PhotoRepository;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class PhotoController extends Controller
 {
+    /**
+     * @var PhotoRepository
+     */
+    private $_photoRepo;
+
+    public function __construct(PhotoRepository $photoRepository)
+    {
+        $this->_photoRepo = $photoRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -75,11 +87,27 @@ class PhotoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Photo  $photo
-     * @return \Illuminate\Http\Response
+     * @param Photo $photo
+     * @return void
+     * @throws \Exception
      */
     public function destroy(Photo $photo)
     {
-        //
+        $this->_photoRepo->delete($photo);
+        return redirect()->back();
+    }
+
+    public function setPrimary(Photo $photo)
+    {
+        $previousPrimary = $this->_photoRepo->findPrimary($photo->mannequin_id);
+        $this->_photoRepo->update(['is_primary' => true], $photo->id);
+        try {
+            if ($previousPrimary->id !== $photo->id) {
+                $this->_photoRepo->update(['is_primary' => false], $previousPrimary->id);
+            }
+        } catch (\Exception $exception) {
+
+        }
+        return redirect()->back();
     }
 }
