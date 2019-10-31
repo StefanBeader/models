@@ -8,7 +8,7 @@ require('./components/customSelect');
 const school = document.getElementById('school');
 
 if (school) {
-    school.addEventListener('changeSchool', (e) => {
+    school.addEventListener('changeSchool', e => {
         if (e.detail.selectedValue === 0) { //no school
             e.target.parentElement.parentElement.nextElementSibling.classList.add("hide");
         } else {
@@ -36,4 +36,16 @@ function openMobileMenu() {
 function hideMobileMenu() {
     mobileMenu.classList.remove('show');
     menuToggle.children[0].innerText = "Menu";
+}
+
+const gridContainer = document.getElementById('container');
+
+if (gridContainer) {
+  imagesLoaded( document.querySelector('#container'), function( instance ) {
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, { "itemSelector": ".grid-item",
+      "columnWidth": ".grid-item",
+      "percentPosition": true,
+      "gutter": 16 });
+  });
 }

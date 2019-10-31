@@ -7,6 +7,7 @@
 require('./bootstrap');
 require('bootstrap-select');
 require('masonry-layout');
+require('imagesloaded');
 
 const school = document.getElementById('school');
 
@@ -23,10 +24,11 @@ if (school) {
 
 $(function () {
     $('.selectpicker').selectpicker();
-
-    // $('.grid').masonry({
-    //     itemSelector: '.grid-item',
-    //     columnWidth: 200
-    // });
 });
-
+var $grid = $('.grid').imagesLoaded( function() {
+  // init Masonry after all images have loaded
+  $grid.masonry({ "itemSelector": ".grid-item",
+    "columnWidth": ".grid-item",
+    "percentPosition": true,
+    "gutter": 30 });
+});

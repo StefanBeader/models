@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "bootstrap-select": "^1.13.12",
+        "imagesloaded": "^4.1.4",
         "masonry-layout": "^4.2.2"
     }
 }

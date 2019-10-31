@@ -5,7 +5,8 @@
 @endsection
 
 @section('scripts')
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 @endsection
 
 @section('main')
@@ -14,7 +15,7 @@
             <h1 class="text-center">{{ $model->getName() }}</h1>
 
             <div id="model">
-                <div class="photos grid" data-masonry='
+                <div class="photos grid" id="container" data-masonry='
                                     { "itemSelector": ".grid-item",
                                     "columnWidth": ".grid-item",
                                     "percentPosition": true,
