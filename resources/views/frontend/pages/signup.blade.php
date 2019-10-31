@@ -219,8 +219,8 @@
                         <p class="mb-3">Please submit four photos of yourself: full-length, waist-up, close-up, and profile.
                             Do your best to replicate the sample images below. These don't need to be professionally done,
                             but there are some guidelines: Shoot your photos outdoors in natural daylight but not direct
-                            sunlight. Remember, we're looking for natural so no makeup, wear your hair down, and no smiles,
-                            please. This is like a passport photo to document your look for us.</p>
+                            sunlight. Remember, we're looking for natural so no makeup and wear your hair down.
+                            This is like a passport photo to document your look for us.</p>
                         <div class="col-2">
                             <div class="form-group">
                                 <label for="full_length">Full Length</label>
