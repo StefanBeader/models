@@ -2,31 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fbf77f6-9956-4618-a35a-5fb685b3b0db" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Enums/MannequinStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Enums/MannequinStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MannequinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MannequinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mannequin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Mannequin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/MannequinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/MannequinRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PhotoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PhotoRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_16_074715_create_photos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_16_074715_create_photos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/apache2/sites/default.apache.conf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/apache2/sites/default.apache.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/backend/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/frontend/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/backend/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/backend/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/frontend/pages/portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/frontend/pages/portfolio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/components/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/components/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/mannequins/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/mannequins/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/mannequins/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/mannequins/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/mannequins/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/mannequins/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/models.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/models.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/portfolio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/portfolio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/img/close_up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/img/full_length.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/img/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/img/waist_up.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/img/waist_up.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/close_up.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/close_up.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/full_length.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/full_length.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/profile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/waist_up.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/waist_up.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/frontend/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/frontend/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/frontend/components/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/frontend/components/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/frontend/components/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/frontend/components/navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/frontend/pages/signup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/frontend/pages/signup.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/components/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/components/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/signup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/signup.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -183,19 +180,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/frontend/img" />
+      <recent name="$PROJECT_DIR$/resources/views/frontend/pages" />
+      <recent name="$PROJECT_DIR$/resources/views/backend/mannequins" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/views/mails" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/backend/mannequins" />
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="D:\Projects\models\resources\views\frontend\pages" />
       <recent name="D:\Projects\models\app\Models" />
       <recent name="D:\Projects\models\resources\sass\backend" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/frontend/img" />
-      <recent name="$PROJECT_DIR$/resources/views/backend/mannequins" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/views/mails" />
-      <recent name="$PROJECT_DIR$/resources/views/frontend/pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,7 +236,8 @@
       <workItem from="1572257462888" duration="50000" />
       <workItem from="1572257578330" duration="1041000" />
       <workItem from="1572378386267" duration="10676000" />
-      <workItem from="1572446018278" duration="2829000" />
+      <workItem from="1572446018278" duration="3845000" />
+      <workItem from="1572706346990" duration="3045000" />
     </task>
     <servers />
   </component>

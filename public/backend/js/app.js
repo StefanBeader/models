@@ -42903,7 +42903,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\models\resources\js\backend\app.js */"./resources/js/backend/app.js");
+module.exports = __webpack_require__(/*! /Users/stefanbeader/code/models/resources/js/backend/app.js */"./resources/js/backend/app.js");
 
 
 /***/ })

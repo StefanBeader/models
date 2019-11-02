@@ -18,10 +18,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/photos/setPrimary/{photo}', 'PhotoController@setPrimary');
 });
 
+
 Route::get('/', 'PageController@home')->name('home');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/sign-up', 'PageController@signUp')->name('signUp');
+Route::get('/privacy-policy', 'PageController@privacyPolicy')->name('privacyPolicy');
 Route::get('/sign-up-success', 'PageController@signUpSuccess')->name('signUpSuccess');
 
 Route::post('/models', 'MannequinController@store');

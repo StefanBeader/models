@@ -153,9 +153,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="waist">Waist</label>
-                                <input id="waist" name="waist" type="number" class="form-control">
-                                @error('waist')
+                                <label for="bust">Bust</label>
+                                <input id="bust" name="bust" type="number" class="form-control">
+                                @error('bust')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -164,9 +164,9 @@
                         </div>
                         <div class="col-2">
                             <div class="form-group">
-                                <label for="bust">Bust</label>
-                                <input id="bust" name="bust" type="number" class="form-control">
-                                @error('bust')
+                                <label for="waist">Waist</label>
+                                <input id="waist" name="waist" type="number" class="form-control">
+                                @error('waist')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -277,8 +277,10 @@
                     <div class="card">
                         <div class="accept">
                             <label for="accept">
-                                <input name="accept" id="accept" type="checkbox"> I have read and accept the
-                                Application Process and Rules and the Privacy Policy.
+                                <input name="accept" id="accept" type="checkbox">
+                                I have read and accept
+                                <a target="_blank" href="{{ URL::to('/privacy-policy') }}">the
+                                    Application Process and Rules and the Privacy Policy.</a>
                             </label>
                         </div>
                         @error('accept')

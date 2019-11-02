@@ -5,6 +5,11 @@ footer {
     .logo {
         width: 200px;
         margin: 0 auto;
+        svg {
+            path {
+                fill: white;
+            }
+        }
     }
 
     .links {

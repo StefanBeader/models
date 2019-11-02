@@ -91,4 +91,9 @@ class PageController extends Controller
         $model = $this->_mannequinRepo->findById(base64_decode($hashedId));
         return view('frontend.pages.portfolio', compact('model'));
     }
+
+    public function privacyPolicy()
+    {
+        return view('frontend.pages.privacy_policy');
+    }
 }
