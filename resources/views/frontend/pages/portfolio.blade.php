@@ -29,11 +29,15 @@
                     @endforeach
                 </div>
                 <div class="info">
+                    @php
+                        $categories = $model->categories()->get()->pluck('id')->toArray();
+                    @endphp
                     <ul>
                         <li>
                             <span>Height</span>
                             <span>{{ $model->height }}cm</span>
                         </li>
+                        @if(!in_array(\App\Models\Category::KIDS, $categories))
                         <li>
                             <span>Waist</span>
                             <span>{{ $model->waist }}cm</span>
@@ -46,6 +50,12 @@
                             <span>Hips</span>
                             <span>{{ $model->hips }}cm</span>
                         </li>
+                        @else
+                            <li>
+                                <span>Age</span>
+                                <span>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $model->birthday)->diffInYears() }}</span>
+                            </li>
+                        @endif
                         <li>
                             <span>Shoes</span>
                             <span>{{ $model->shoe_size }}eu</span>

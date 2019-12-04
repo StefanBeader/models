@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\MannequinStatus;
+use App\Http\Requests\AdminStoreMannequinRequest;
 use App\Http\Requests\StoreMannequinRequest;
 use App\Mail\PendingModelMail;
 use App\Models\Category;
@@ -114,7 +115,9 @@ class MannequinController extends Controller
     public function update(Request $request, int $id)
     {
         $this->_mannequinRepo->update($request->all(), $id);
-        $this->_mannequinRepo->storeMannequinToCategories($request->categories, $id);
+        if ($request->categories) {
+            $this->_mannequinRepo->storeMannequinToCategories($request->categories, $id);
+        }
         if (!empty($request->photos)) {
             $this->_photoRepo->storeAll($request->photos, $id, 'book');
         }
@@ -134,10 +137,10 @@ class MannequinController extends Controller
 
     /**
      * Store Mannequin by app admin
-     * @param Request $request
+     * @param AdminStoreMannequinRequest $request
      * @return RedirectResponse|Redirector
      */
-    public function addModel(Request $request)
+    public function addModel(AdminStoreMannequinRequest $request)
     {
         $this->_mannequinRepo->store($request->all());
         return redirect('/models');
